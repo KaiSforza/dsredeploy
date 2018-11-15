@@ -18,13 +18,9 @@ dsre_repo:
     - target: /home/interview/dsre
     - user: interview
 
-dsre_service_file:
-  file.managed:
-    - name: 
-
 dsre_run:
   cmd.run:
-    - name: /home/interview/dsre_env/bin/python /home/interview/dsre/dsre/manage.py runserver 80
+    - name: /home/interview/dsre_env/bin/python /home/interview/dsre/dsre/manage.py runserver 80 &
     - watch:
       - virtualenv: dsre_env
       - git: dsre_repo
