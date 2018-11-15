@@ -13,7 +13,7 @@ dsre_repo:
 
 dsre_run:
   cmd.run:
-    - name: /home/interview/dsre_env/bin/python3 /home/interview/dsre/dsre/manage.py runserver 80
+    - name: /home/interview/dsre_env/bin/python2 /home/interview/dsre/dsre/manage.py runserver 80
     - watch:
       - virtualenv: dsre_env
       - git: dsre_repo
